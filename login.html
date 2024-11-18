@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Finder - Log in</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2331/2331945.png">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="./css/login.css" rel="stylesheet">
+</head>
+<body>
+    <?php
+    // Inicia a sessão e exibe a mensagem de erro se existir
+    session_start();
+    $errorMessage = isset($_SESSION['error_message']) ? $_SESSION['error_message'] : '';
+    unset($_SESSION['error_message']); // Limpa a mensagem de erro após exibir
+    ?>
+    
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <h2>Bem vindo ao <span class="highlight">Hotel Finder</span></h2>
+                <p class="register-text">Não tem conta? <a href="registo.html" class="register-link">Registe-se aqui!</a></p>
+            </div>
+            <h1 class="login-title">Log in</h1>
+
+            <!-- Exibir mensagem de erro, se existir -->
+            <?php if (!empty($errorMessage)): ?>
+                <div class="error-message"><?php echo $errorMessage; ?></div>
+            <?php endif; ?>
+
+            <div class="google-login">
+                <span class="google-icon">
+                    <i class="fab fa-google"></i>
+                </span>
+                <span class="google-text">Continuar com o Google</span>
+            </div>
+
+            <p class="or-text">ou</p>
+
+            <form action="process_login.php" method="post">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="username@gmail.com" required />
+                </div>
+
+                <div class="input-group" style="position: relative;">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <div class="password-icon" onclick="togglePassword()"></div>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox" /> Lembrar-me</label>
+                    <a href="#" class="forgot-password">Esqueceu a palavra-passe?</a>
+                </div>
+                <div class="login-button">
+                    <button type="submit">Log In</button>
+                </div>
+            </form>
+        </div>
+    </div>    
+
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const passwordIcon = document.querySelector('.password-icon');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                passwordIcon.style.background = "url('https://cdn-icons-png.flaticon.com/512/159/159604.png') no-repeat center/contain";
+            } else {
+                passwordInput.type = 'password';
+                passwordIcon.style.background = "url('https://cdn-icons-png.flaticon.com/512/565/565655.png') no-repeat center/contain";
+            }
+        }
+    </script>
+</body>
+</html>

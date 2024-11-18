@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(../images/v25_546.png) no-repeat center center;
+    background-size: cover;
+}
+
+.registro-container {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.registro-title {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.registro-box {
+    position: relative;
+    width: 440px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 40px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    margin-right: 90px;
+}
+
+.registro-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.registro-header h2 {
+    font-size: 21px;
+    font-weight: 400;
+    color: black;
+}
+
+.registro-highlight {
+    color: #3E7CE2;
+}
+
+.registro-login-text {
+    font-size: 13px;
+    color: #8D8D8D;
+}
+
+.registro-login-link {
+    color: #3E7CE2;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.registro-main-title {
+    font-size: 28px;
+    font-weight: 500;
+    color: black;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.registro-input-group {
+    margin: 15px 0;
+    position: relative;
+}
+
+.registro-input-group label {
+    display: block;
+    font-size: 16px;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.registro-input-group input {
+    width: 100%;
+    padding: 15px;
+    padding-right: 40px; /* Espaço extra para o ícone no lado direito */
+    border-radius: 9px;
+    border: 1px solid #3E7CE2;
+    font-size: 14px;
+    color: #808080;
+    box-sizing: border-box;
+}
+
+.password-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    width: 20px;
+    height: 20px;
+    background: url('https://cdn-icons-png.flaticon.com/512/565/565655.png') no-repeat center/contain;
+    cursor: pointer;
+}
+
+.password-icon.active {
+    background: url('https://cdn-icons-png.flaticon.com/512/159/159604.png') no-repeat center/contain;
+}
+
+.registro-input-group .error-message {
+    position: absolute;
+    bottom: -18px; /* Mensagem aparece logo abaixo do campo */
+    left: 0;
+    color: red;
+    font-size: 12px;
+    display: none; /* Inicialmente escondido */
+}
+
+.registro-input-group.error input {
+    border-color: red; /* Campo com erro em vermelho */
+}
+
+.registro-input-group.error .error-message {
+    display: block; /* Mostra a mensagem de erro */
+}
+
+.registro-remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.registro-remember-me {
+    font-size: 12px;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.registro-remember-me input {
+    margin-right: 5px;
+}
+
+.registro-forgot-password {
+    color: #4285F4;
+    font-size: 13px;
+    text-decoration: none;
+    margin-left: auto;
+    padding-left: 20px;
+}
+
+.registro-button {
+    display: flex;
+    justify-content: center;
+}
+
+.registro-button button {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    color: white;
+    background: #3E7CE2;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: 0px 4px 19px rgba(119, 147, 65, 0.30);
+}
+
+.google-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E9F1FF;
+    border-radius: 9px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.google-icon {
+    font-size: 18px;
+    margin-right: 8px; /* Ajuste do espaço entre o ícone e o texto */
+    color: #4285F4;
+}
+
+.google-text {
+    font-size: 16px;
+    color: #4285F4;
+}
+
+.google-login:hover {
+    background: #d0e4ff;
+}
+
+.or-text {
+    text-align: center;
+    font-size: 14px;
+    color: #808080;
+    margin: 20px 0;
+}
+
+.error-modal {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 0, 0, 0.8);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none; /* Inicialmente escondido */
+    text-align: center;
+    width: auto;
+    max-width: 400px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #3E7CE2;
+    text-decoration: none;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.navbar-menu li {
+    font-size: 16px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.navbar-menu a:hover {
+    text-decoration: underline;
+    color: #3E7CE2;
+}
+
+.navbar-signin {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-signin a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #3E7CE2;
+    color: white;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-signin a:hover {
+    background-color: #265ca0;
+}

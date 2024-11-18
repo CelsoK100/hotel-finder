@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(../images/v25_546.png) no-repeat center center;
+    background-size: cover;
+}
+
+.login-container {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinha a caixa de login à direita */
+}
+
+.background-image {
+    width: 60%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+}
+
+.title {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.login-box {
+    position: relative;
+    width: 440px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 40px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    margin-right: 90px; /* Ajusta o espaçamento da direita */
+}
+
+.login-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.login-header h2 {
+    font-size: 21px;
+    font-weight: 400;
+    color: black;
+}
+
+.highlight {
+    color: #3E7CE2;
+}
+
+.register-text {
+    font-size: 13px;
+    color: #8D8D8D;
+}
+
+.register-link {
+    color: #3E7CE2;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.login-title {
+    font-size: 28px;
+    font-weight: 500;
+    color: black;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.google-login {
+    display: flex;
+    align-items: center;
+    background: #E9F1FF;
+    border-radius: 9px;
+    padding: 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    justify-content: center;
+}
+.google-login {
+    display: center;
+    text-align: center;
+    align-items: center;
+    background: #E9F1FF;
+    border-radius: 9px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.google-icon {
+    font-size: 18px;
+    margin-right: 8px; /* Ajuste do espaço entre o ícone e o texto */
+    color: #4285F4;
+}
+
+.google-text {
+    font-size: 16px;
+    color: #4285F4;
+}
+
+.google-login:hover {
+    background: #d0e4ff;
+}
+
+
+.or-text {
+    text-align: center;
+    font-size: 14px;
+    color: #808080;
+    margin: 20px 0;
+}
+
+.input-group {
+    margin: 15px 0;
+}
+
+.input-group label {
+    display: block;
+    font-size: 16px;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 9px;
+    border: 1px solid #3E7CE2;
+    font-size: 14px;
+    color: #808080;
+}
+
+.password-icon {
+    position: absolute;
+    text-align: center;
+    right: 15px;
+    top: 47px;
+    width: 20px;
+    height: 20px;
+    background: url('https://cdn-icons-png.flaticon.com/512/565/565655.png') no-repeat center/contain; /* Ícone de olho */
+    cursor: pointer;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.remember-me {
+    font-size: 12px;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input {
+    margin-right: 5px;
+}
+
+.forgot-password {
+    color: #4285F4;
+    font-size: 13px;
+    text-decoration: none;
+    margin-left: auto;
+    padding-left: 20px;
+}
+
+.login-button {
+    display: flex;
+    justify-content: center;
+}
+
+.login-button button {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    color: white;
+    background: #3E7CE2;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: 0px 4px 19px rgba(119, 147, 65, 0.30);
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: center;
+    background-color: #ffe6e6;
+    padding: 10px;
+    border-radius: 5px;
+}
